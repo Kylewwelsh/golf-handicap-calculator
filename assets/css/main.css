@@ -1,15 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;800;900&display=swap");
 
 html {
   overflow: hidden;
   overflow-x: hidden;
-  }
-  ::-webkit-scrollbar {
+}
+::-webkit-scrollbar {
   width: 0px;
-  }
+}
 
 body {
   margin: 0;
+  background-color: rgba(28, 236, 28, 0.233);
 }
 
 .container {
@@ -19,9 +20,12 @@ body {
   gap: 0px 0px;
   width: 100vw;
   height: 100vh;
+  animation: fadeIn 3.6s;
 }
 
-.whatOption, .howOption, .calculateOption {
+.whatOption,
+.howOption,
+.calculateOption {
   display: flex;
   flex-flow: column wrap;
 }
@@ -40,7 +44,7 @@ body {
   background-image: url(../images/andrew-shelley-Yu6Z_Fia1Ls-unsplash.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position:center;
+  background-position: center;
 }
 
 .calculateOption {
@@ -52,16 +56,20 @@ body {
   background-position: bottom;
 }
 
-.optionOne, .optionTwo, .optionThree {
+.optionOne,
+.optionTwo,
+.optionThree {
   color: rgb(255, 255, 255);
-  font-family: 'Raleway' sans-serif;
+  font-family: "Raleway" sans-serif;
   font-weight: 900;
-  font-size: clamp(1.8rem,3vw,2.6rem);
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
   text-align: center;
   margin: auto;
 }
 
-.optionOne:hover, .optionTwo:hover, .optionThree:hover {
+.optionOne:hover,
+.optionTwo:hover,
+.optionThree:hover {
   transition: 0.85s;
   transform: scale(1.1);
   cursor: pointer;
@@ -76,9 +84,10 @@ body {
   grid-row: 1 / 4;
   height: 100vh;
   width: 100vw;
-  background-color: yellow;
   text-align: center;
   margin: auto;
+  animation: fadeIn 3.6s;
+  color: white;
 }
 
 .hidden {
@@ -87,4 +96,44 @@ body {
 
 .what {
   display: none;
+}
+
+.how {
+  display: none;
+}
+
+.calculate {
+  display: none;
+}
+
+.content {
+  background-color: rgba(51, 51, 51, 0.664);
+  height: 100vh;
+  position: absolute;
+  top: -100vh;
+  animation: slide 1.25s ease-in 0s 1 forwards;
+}
+
+h1 {
+  margin: 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide {
+  from {
+    top: -100vh;
+  }
+
+  to {
+    top: 0vh;
+  }
 }
